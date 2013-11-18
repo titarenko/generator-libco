@@ -24,12 +24,12 @@ It also creates following files:
 
 Package.json is fully initialized including `test` NPM task which runs all tests with coverage report generation at the end.
 
-### yo libco:module <name>
+### yo libco:module `MyEntity`
 
 This subgenerator creates following files:
 
-* modules/<name>.coffee
-* tests/modules/<name>Tests.coffee
+* modules/MyEntity.coffee
+* tests/modules/MyEntityTests.coffee
 
 ## Getting Started
 
