@@ -21,13 +21,19 @@ describe('libco generator', function () {
 
   it('creates expected files', function (done) {
     var expected = [
-      // add files you expect to exist here.
-      '.jshintrc',
-      '.editorconfig'
+      '.gitignore',
+      '.gitattributes',
+      '.travis.yml',
+      'README.md',
+      'package.json'
     ];
 
     helpers.mockPrompt(this.app, {
-      'someOption': true
+      'name': 'libco',
+      'author': 'author',
+      'authorName': 'authorName',
+      'description': 'description',
+      'keywords': '"keyword"'
     });
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
