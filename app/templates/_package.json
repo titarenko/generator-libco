@@ -1,5 +1,26 @@
 {
-  "name": "package",
-  "version": "0.0.0",
-  "dependencies": {}
+  "name": "<%= name %>",
+  "version": "0.1.0",
+  "description": "<%= description %>",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "coffee -co js . && cp -R tests/data js/tests/data && istanbul cover node_modules/mocha/bin/_mocha -- -w -t 10000 --recursive js/tests -R spec -r should && cp README.md package.json js/",
+    "start": "nodemon index.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://<%= author %>@bitbucket.org/<%= author %>/<%= name %>.git"
+  },
+  "keywords": [<%= keywords %>],
+  "author": "<%= authorName %>",
+  "license": "BSD",
+  "dependencies": {
+    "async": "~0.2.9",
+    "winston": "~0.7.2"
+  },
+  "devDependencies": {  	
+    "should": "~1.2.2",
+    "mocha": "~1.12.1",
+    "sinon": "~1.7.3"
+  }
 }

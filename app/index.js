@@ -19,32 +19,43 @@ util.inherits(LibcoGenerator, yeoman.generators.Base);
 LibcoGenerator.prototype.askFor = function askFor() {
   var cb = this.async();
 
-  // have Yeoman greet the user.
   console.log(this.yeoman);
 
   var prompts = [{
-    type: 'confirm',
-    name: 'someOption',
-    message: 'Would you like to enable this option?',
-    default: true
+    name: 'name',
+    message: 'Library name (for example, super-library)'
+  }, {
+    name: 'author',
+    message: 'Author nickname (for example, awesome-author)'
+  }, {
+    name: "authorName",
+    message: "Author name (for example, Awesome Author)"
+  }, {
+    name: "description",
+    message: "Project description (for example, The most awesome thing you've ever seen!)"
+  }, {
+    name: "keywords",
+    message: "Keywords (for example, \"keyword one\", \"keyword two\")"
   }];
 
   this.prompt(prompts, function (props) {
-    this.someOption = props.someOption;
-
+    this.name = props.name;
+    this.author = props.author;
+    this.authorName = props.authorName;
+    this.description = props.description;
+    this.keywords = props.keywords;
     cb();
   }.bind(this));
 };
 
-LibcoGenerator.prototype.app = function app() {
-  this.mkdir('app');
-  this.mkdir('app/templates');
-
-  this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
-};
-
-LibcoGenerator.prototype.projectfiles = function projectfiles() {
-  this.copy('editorconfig', '.editorconfig');
-  this.copy('jshintrc', '.jshintrc');
+LibcoGenerator.prototype.lib = function lib() {
+  this.mkdir('modules');
+  this.mkdir('tests/modules');
+  this.mkdir('tests/data')
+  this.template('_package.json', 'package.json');
+  this.copy('gitignore', '.gitignore');
+  this.copy('gitattributes', '.gitattributes');
+  this.copy('travis.yml', '.travis.yml');
+  this.template("_README.md", "README.md");
+  this.copy('Log.coffee', 'modules/Log.coffee');
 };
