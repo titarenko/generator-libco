@@ -58,4 +58,5 @@ LibcoGenerator.prototype.lib = function lib() {
   this.copy('travis.yml', '.travis.yml');
   this.template("_README.md", "README.md");
   this.copy('Log.coffee', 'modules/Log.coffee');
+  this.copy('data.txt', 'tests/data/data.txt');
 };

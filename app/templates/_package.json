@@ -4,7 +4,7 @@
   "description": "<%= description %>",
   "main": "index.coffee",
   "scripts": {
-    "test": "coffee -co js . && cp -R tests/data js/tests/data && istanbul cover node_modules/mocha/bin/_mocha -- -w -t 10000 --recursive js/tests -R spec -r should && cp README.md package.json js/",
+    "test": "coffee -co js . && cp -R tests/data js/tests/data && istanbul cover node_modules/mocha/bin/_mocha -- -t 10000 --recursive js/tests -R spec -r should && cp README.md package.json js/",
     "start": "nodemon index.coffee"
   },
   "repository": {
@@ -13,7 +13,7 @@
   },
   "keywords": [<%= keywords %>],
   "author": "<%= authorName %>",
-  "license": "BSD",
+  "license": "MIT",
   "dependencies": {
     "async": "~0.2.9",
     "winston": "~0.7.2"
