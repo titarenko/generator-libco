@@ -1,15 +1,16 @@
 {
   "name": "generator-libco",
-  "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "version": "0.1.0",
+  "description": "\"Library in CoffeeScript\" generator for Yeoman",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "library",
+    "coffeescript"
   ],
   "homepage": "https://github.com/titarenko/generator-libco",
   "bugs": "https://github.com/titarenko/generator-libco/issues",
   "author": {
     "name": "Constantin Titarenko",
-    "email": "",
     "url": "https://github.com/titarenko"
   },
   "main": "app/index.js",
