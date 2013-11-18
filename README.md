@@ -1,6 +1,6 @@
 # generator-libco [![Build Status](https://secure.travis-ci.org/titarenko/generator-libco.png?branch=master)](https://travis-ci.org/titarenko/generator-libco)
 
-A generator for [Yeoman](http://yeoman.io) intended for library project (written in CoffeeScript) skeleton generation in order to reduce tedious repetitive work.
+A generator for [Yeoman](http://yeoman.io) intended to do tedious repetitive work instead of you while creating library projects (written in CoffeeScript).
 
 ## Purpose
 
@@ -22,7 +22,7 @@ It also creates following files:
 * README.md
 * package.json 
 
-Package.json is fully initialized including `test` NPM task which runs all tests with coverage report generation at the end.
+`Package.json` is fully initialized including `test` NPM task which runs all tests with coverage report generation at the end.
 
 ### yo libco:module `MyEntity`
 

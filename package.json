@@ -1,7 +1,7 @@
 {
   "name": "generator-libco",
   "version": "0.1.0",
-  "description": "\"Library in CoffeeScript\" generator for Yeoman",
+  "description": "\"Library in CoffeeScript\" generator for Yeoman.",
   "keywords": [
     "yeoman-generator",
     "library",
