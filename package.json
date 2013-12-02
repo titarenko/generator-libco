@@ -19,10 +19,11 @@
     "url": "git://github.com/titarenko/generator-libco.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {
-    "yeoman-generator": "~0.13.0"
+    "yeoman-generator": "~0.13.0",
+    "coveralls": "~2.5.0"
   },
   "devDependencies": {
     "mocha": "~1.12.0"
