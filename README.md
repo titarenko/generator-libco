@@ -1,4 +1,4 @@
-# generator-libco [![Build Status](https://secure.travis-ci.org/titarenko/generator-libco.png?branch=master)](https://travis-ci.org/titarenko/generator-libco)
+# generator-libco [![Build Status](https://secure.travis-ci.org/titarenko/generator-libco.png?branch=master)](https://travis-ci.org/titarenko/generator-libco) [![Code Climate](https://codeclimate.com/github/titarenko/generator-libco.png)](https://codeclimate.com/github/titarenko/generator-libco)
 
 A generator for [Yeoman](http://yeoman.io) intended to do tedious repetitive work instead of you while creating library projects (written in CoffeeScript).
 
